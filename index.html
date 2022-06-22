@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h2 style="text-align: center;">FizzBuzz</h2>
+    <div style="text-align: center;">
+    <label>Masukan Angka :</label>
+        <input type="text" id="input"></input>
+            <button onclick="myFunction()">Klik</button>
+        <p id="hasil"></p>
+    </div>
+    <script>
+        function myFunction(){
+            let text;
+            text=document.getElementById('input').value
+            if (text==0){
+                text='invalid input';
+            }
+            else if (text%5==0 && text%3!=0){
+                text='Buzz';
+            }
+            else if (text%5==0 && text%3==0){
+                text='Fizz Buzz'
+            }
+            else if (text%3==0 && text%5!=0){
+                text='Fizz'
+            }
+            document.getElementById('hasil').innerHTML=text;
+            console.log(document.getElementById('input').value);
+        }
+    </script>
+</body>
+</html>
